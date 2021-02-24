@@ -14,7 +14,8 @@ https://github.com/bblanchon/ArduinoStreamUtils
 https://arduinojson.org/v6/how-to/debug-data-coming-from-a-stream/
 
 Here's my socket code from the server.js file of my node express Web server<br><br>
-<code>// socket for esp32 to fetch projet data
+```
+// socket for esp32 to fetch projet data
 var net = require('net');
 var serverS = net.createServer(function(socket) {
 	fs.readFile("./data/projet.json", 'utf-8', (err, data) => {
@@ -35,4 +36,4 @@ serverS.on('error', (err) => {
 serverS.listen(1337, () => {
 	console.log('listening on port 1337...');
   });</code>
-
+```
